@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Project</title>
+    <style>
+        /* Default Light Mode Styles */
+        :root {
+            --bg-color: #f0f8ff;
+            --text-color: #333;
+            --header-bg: linear-gradient(90deg, #1e90ff, #ff7f50);
+            --nav-bg: #ff6347;
+            --btn-bg: linear-gradient(45deg, #32cd32, #00ff7f);
+            --btn-hover-bg: linear-gradient(45deg, #00ff7f, #32cd32);
+            --footer-bg: #35424a;
+            --footer-text: #fff;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            --bg-color: #1a1a2e;
+            --text-color: #eaeaea;
+            --header-bg: linear-gradient(90deg, #3b3b98, #d63447);
+            --nav-bg: #2d3436;
+            --btn-bg: linear-gradient(45deg, #00cec9, #0984e3);
+            --btn-hover-bg: linear-gradient(45deg, #0984e3, #00cec9);
+            --footer-bg: #0a0a0a;
+            --footer-text: #b2bec3;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        header {
+            background: var(--header-bg);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            background: var(--nav-bg);
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        nav ul li a:hover {
+            color: var(--btn-hover-bg);
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        body.dark-mode .container {
+            background: #2d2d44;
+        }
+        footer {
+            text-align: center;
+            background: var(--footer-bg);
+            color: var(--footer-text);
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.7rem 1.2rem;
+            color: #fff;
+            background: var(--btn-bg);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: var(--btn-hover-bg);
+            transform: scale(1.1);
+        }
+        .dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: var(--btn-bg);
+            color: #fff;
+            z-index: 1000;
+        }
+        .dark-mode-toggle:hover {
+            background: var(--btn-hover-bg);
+        }
+
+        /* Cracker Animation */
+        .cracker {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff4500;
+            opacity: 0;
+            animation: fadeInOut 2s ease-in-out;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+        }
+    </style>
+</head>
+<body>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <header>
+        <h1 id="header-text">Welcome to Our Project Website for CI/CD and Configuration Management</h1>
+        <p>Please sir, give us good marks 🙏</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">Sahil Thakur</a></li>
+            <li><a href="#about">Sneha Kaimal</a></li>
+            <li><a href="#about">Sharada Chhetri </a></li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are a passionate group of students diving deep into the exciting world of DevOps for Cloud Computing. 
+                With diverse backgrounds in IT, software development, and cloud technologies, we are united by a shared goal: 
+                to bridge the gap between development and operations. By mastering tools like Docker, Kubernetes, Jenkins, and Terraform, 
+                and leveraging platforms like AWS, Azure, and Google Cloud, we are equipping ourselves to design, deploy, and manage scalable, 
+                efficient, and automated cloud solutions. Through continuous learning and collaboration, we aim to become proficient in 
+                implementing CI/CD pipelines, infrastructure as code, and cloud-native architectures, 
+                preparing ourselves to meet the demands of the ever-evolving tech industry.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li><strong>CI/CD Pipeline Implementation:</strong> Streamlining software development and deployment with automated, reliable, and scalable pipelines.</li>
+                <li><strong>Cloud Infrastructure Management:</strong> Designing, deploying, and maintaining robust infrastructure on AWS, Azure, and Google Cloud Platform.</li>
+                <li><strong>Infrastructure as Code (IaC):</strong> Automating infrastructure provisioning and management using tools like Terraform and CloudFormation.</li>
+                <li><strong>Containerization & Orchestration:</strong> Simplifying application delivery through Docker and Kubernetes for seamless scalability and portability.</li>
+                <li><strong>Monitoring & Logging Solutions:</strong> Enhancing system performance and reliability with tools like ELK Stack, Prometheus, and Grafana.</li>
+                <li><strong>Cost Optimization:</strong> Strategizing to maximize cloud efficiency while minimizing expenses.</li>
+                <li><strong>Security & Compliance:</strong> Implementing robust security measures and ensuring compliance with industry standards.</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Got questions? Concerns? Or just want to share your favorite meme? We're all ears!</p>
+            <button class="btn" onclick="alert('We knew you’d click this. 🐱‍👤 Thanks for saying hello!')">
+                Click Me, Human!
+            </button>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; <span id="year"></span> DevOps Project Team | All Rights Reserved</p>
+    </footer>
+    <script>
+        // Dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            const toggleButton = document.querySelector('.dark-mode-toggle');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '☀️ Light Mode';
+            } else {
+                toggleButton.textContent = '🌙 Dark Mode';
+            }
+        }
+
+        // Function to create a cracker element
+        // function showCracker() {
+        //     const cracker = document.createElement('div');
+        //     cracker.classList.add('cracker');
+        //     cracker.textContent = 'Full Marks Please 🙏';
+        //     document.body.appendChild(cracker);
+
+            // Remove the cracker after animation ends
+            setTimeout(() => {
+                cracker.remove();
+            }, 3000);
+        
+
+        // Trigger cracker every 5 seconds
+        setInterval(showCracker, 1500);
+    </script>
+</body>
+</html>
