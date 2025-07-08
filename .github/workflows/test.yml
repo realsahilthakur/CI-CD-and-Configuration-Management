@@ -31,7 +31,7 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
-      working-directory: cicd-project
+      working-directory: project
 
     - name: Run Tests
       env:
@@ -40,4 +40,4 @@ jobs:
         DB_PASS: testpass
         DB_NAME: testdb
       run: npm test
-      working-directory: cicd-project
+      working-directory: project
